@@ -1,0 +1,23 @@
+@import "common";
+@import "media-queries";
+
+:host {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 12px;
+
+  @include respond-above(sm) {
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+h1 {
+  font-size: 27px;
+  line-height: 44px;
+  font-weight: 300;
+  border-bottom: 2px $purple solid;
+}

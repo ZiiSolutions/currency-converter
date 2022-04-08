@@ -1,0 +1,13 @@
+// To keep things simple all common css is placed here, as this is a small application with limited specification.
+// However, the approach taken in a bigger project would be to organise fonts, colours and media queries in separate files.
+// E.g. _fonts.scss, _color.scss, common-css-classes.scss etc.
+
+// Note: typically fonts should be responsive for better UX.
+// I would usually bring this up with designer so we can work out what are the fonts for smaller resolution devices.
+// Then use breakpoints in within classes to display different fonts. However, I will leave this out in this test for simplicity.
+$primary-font: Roboto, "Helvetica Neue", sans-serif;
+
+// Colours
+$light-grey: #2c2c2c;
+$purple: #9c27b0;
+$white: #ffffff;
