@@ -1,0 +1,45 @@
+@import "common";
+@import "media-queries";
+
+:host {
+  display: block;
+  width: 100%;
+  @include respond-above(sm) {
+    width: fit-content;
+  }
+}
+
+.currency-form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border: 2px $light-grey solid;
+  border-radius: 5px;
+  margin-bottom: 30px;
+
+  @include respond-above(sm) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+    row-gap: 10px;
+    margin-bottom: 0px;
+  }
+}
+
+/* material font colour */
+input.mat-input-element {
+  color: $white;
+}
+
+// Remove arrows and spinners
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

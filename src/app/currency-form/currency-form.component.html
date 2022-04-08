@@ -1,0 +1,31 @@
+<form class="currency-form">
+  <mat-form-field appearance="fill" floatLabel="always">
+    <mat-label>From</mat-label>
+    <input matInput type="number" placeholder="0" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Base Currency</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let currency of currencies" [value]="currency">
+        {{ currency }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" floatLabel="always">
+    <mat-label>To</mat-label>
+    <input matInput type="number" placeholder="0" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Target Currency</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let currency of currencies" [value]="currency">
+        {{ currency }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary">Convert</button>
+</form>
