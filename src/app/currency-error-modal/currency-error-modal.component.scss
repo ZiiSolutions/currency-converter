@@ -1,0 +1,22 @@
+@import "common";
+@import "media-queries";
+
+.error-container {
+  border-bottom: 2px $purple solid;
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+  margin-bottom: 30px;
+
+  @include respond-above(sm) {
+    margin-bottom: 0px;
+  }
+}
+
+.error-message {
+  margin: 0;
+  font-size: 16px;
+}
+
+.active {
+  opacity: 1;
+}

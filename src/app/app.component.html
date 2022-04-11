@@ -1,2 +1,5 @@
 <h1>Currency Converter</h1>
 <app-currency-form></app-currency-form>
+<app-currency-error-modal
+  [errorMessage]="errorMessage$ | async"
+></app-currency-error-modal>
