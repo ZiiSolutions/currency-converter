@@ -1,7 +1,7 @@
 # CurrencyConverter
 Note: this application uses https://fixer.io APIs to access currency conversion operations.
 
-The development was done using an API key which doesn't have access to the /convert endpoint. In theory if an entitled API key is provided the application should work fine. For confidence unit tests have been implemented. That being said, full manual testing was not performed during development due to lack of access. However, the code in this repository is a demonstration of how the API can be  with Angular.
+The development was done using an API key which doesn't have access to the /convert endpoint. In theory if an entitled API key is provided the application should work fine. For confidence unit tests have been implemented. That being said, full manual testing was not performed during development due to lack of access. However, the code in this repository is a demonstration of how the API can be used with Angular.
 ___
 
 ## Project requirements
