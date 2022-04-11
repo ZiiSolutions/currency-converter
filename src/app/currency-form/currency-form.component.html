@@ -1,28 +1,34 @@
-<form class="currency-form">
+<form class="currency-form" [formGroup]="form" (ngSubmit)="onSubmit()">
   <mat-form-field appearance="fill" floatLabel="always">
     <mat-label>From</mat-label>
-    <input matInput type="number" placeholder="0" />
+    <input matInput type="number" formControlName="from" />
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Base Currency</mat-label>
-    <mat-select>
-      <mat-option *ngFor="let currency of currencies" [value]="currency">
-        {{ currency }}
+    <mat-select formControlName="fromSymbol">
+      <mat-option
+        *ngFor="let item of currencySymbols | async | keyvalue"
+        [value]="item.key"
+      >
+        {{ item.value }}
       </mat-option>
     </mat-select>
   </mat-form-field>
 
   <mat-form-field appearance="fill" floatLabel="always">
     <mat-label>To</mat-label>
-    <input matInput type="number" placeholder="0" />
+    <input matInput type="number" formControlName="to" />
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Target Currency</mat-label>
-    <mat-select>
-      <mat-option *ngFor="let currency of currencies" [value]="currency">
-        {{ currency }}
+    <mat-select formControlName="targetSymbol">
+      <mat-option
+        *ngFor="let item of currencySymbols | async | keyvalue"
+        [value]="item.key"
+      >
+        {{ item.value }}
       </mat-option>
     </mat-select>
   </mat-form-field>
